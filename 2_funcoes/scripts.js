@@ -127,16 +127,15 @@ let arrowFuncao = () => {
 arrowFuncao(); // Saída: Window (em browser), o this não muda em arrow functions
 
 // Aula: Funções Recursivas
-// Função recursiva para calcular fatorial
-function fatorial(n) {
-  if (n === 0) {
-    return 1;
-  } else {
-    return n * fatorial(n - 1);
+// Função recursiva para calcular o n-ésimo número da sequência de Fibonacci
+function fibonacci(n) {
+  if (n <= 1) {
+    return n; // Retorna n porque os dois primeiros números são 0 e 1, respectivamente.
   }
+  return fibonacci(n - 1) + fibonacci(n - 2); // Soma dos dois números anteriores na sequência.
 }
 
-console.log(fatorial(5)); // Saída: 120
+console.log(fibonacci(10)); // Saída: 55
 
 // Função recursiva para contar até um número
 function contarAte(max, atual) {
